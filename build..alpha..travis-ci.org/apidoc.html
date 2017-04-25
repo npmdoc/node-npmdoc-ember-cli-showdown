@@ -1,0 +1,431 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/gcollazo/ember-cli-showdown"
+
+    >ember-cli-showdown (v3.0.0)</a>
+</h1>
+<h4>Ember component to render markdown into HTML.</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.ember-cli-showdown">module ember-cli-showdown</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-cli-showdown.importBrowserDependencies">
+            function <span class="apidocSignatureSpan">ember-cli-showdown.</span>importBrowserDependencies
+            <span class="apidocSignatureSpan">(app)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-cli-showdown.importFastBootDependencies">
+            function <span class="apidocSignatureSpan">ember-cli-showdown.</span>importFastBootDependencies
+            <span class="apidocSignatureSpan">(app)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-cli-showdown.included">
+            function <span class="apidocSignatureSpan">ember-cli-showdown.</span>included
+            <span class="apidocSignatureSpan">(app)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-cli-showdown.treeForVendor">
+            function <span class="apidocSignatureSpan">ember-cli-showdown.</span>treeForVendor
+            <span class="apidocSignatureSpan">(vendorTree)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">ember-cli-showdown.</span>index</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">ember-cli-showdown.</span>name</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.ember-cli-showdown.index">module ember-cli-showdown.index</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-cli-showdown.index.importBrowserDependencies">
+            function <span class="apidocSignatureSpan">ember-cli-showdown.index.</span>importBrowserDependencies
+            <span class="apidocSignatureSpan">(app)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-cli-showdown.index.importFastBootDependencies">
+            function <span class="apidocSignatureSpan">ember-cli-showdown.index.</span>importFastBootDependencies
+            <span class="apidocSignatureSpan">(app)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-cli-showdown.index.included">
+            function <span class="apidocSignatureSpan">ember-cli-showdown.index.</span>included
+            <span class="apidocSignatureSpan">(app)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ember-cli-showdown.index.treeForVendor">
+            function <span class="apidocSignatureSpan">ember-cli-showdown.index.</span>treeForVendor
+            <span class="apidocSignatureSpan">(vendorTree)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">ember-cli-showdown.index.</span>name</span>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.ember-cli-showdown" id="apidoc.module.ember-cli-showdown">module ember-cli-showdown</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.ember-cli-showdown.importBrowserDependencies" id="apidoc.element.ember-cli-showdown.importBrowserDependencies">
+        function <span class="apidocSignatureSpan">ember-cli-showdown.</span>importBrowserDependencies
+        <span class="apidocSignatureSpan">(app)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">importBrowserDependencies(app) {
+  this.import(&#x27;vendor/showdown.js&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+this._super.included.apply(this, arguments);
+
+let host = this._findHost();
+
+if (isFastBoot()) {
+  this.importFastBootDependencies(host);
+} else {
+  this.<span class="apidocCodeKeywordSpan">importBrowserDependencies</span>(host);
+}
+  },
+
+  treeForVendor(vendorTree) {
+let trees = [];
+
+if (vendorTree) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-cli-showdown.importFastBootDependencies" id="apidoc.element.ember-cli-showdown.importFastBootDependencies">
+        function <span class="apidocSignatureSpan">ember-cli-showdown.</span>importFastBootDependencies
+        <span class="apidocSignatureSpan">(app)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">importFastBootDependencies(app) {
+  let pkg = require(path.join(app.project.root, &#x27;package.json&#x27;));
+  let whitelist = pkg.fastbootDependencies;
+
+  if (!whitelist || whitelist &#x26;&#x26; !~whitelist.indexOf(&#x27;showdown&#x27;)) {
+    throw new Error(&#x22;[ember-cli-showdown] showdown is missing from package.json&#x27;s fastbootDependencies.\nSee: https://github.com
+/ember-fastboot/ember-cli-fastboot#whitelisting-packages&#x22;);
+  }
+
+  this.import(&#x27;vendor/fastboot-showdown.js&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+included(app) {
+  this._super.included.apply(this, arguments);
+
+  let host = this._findHost();
+
+  if (isFastBoot()) {
+    this.<span class="apidocCodeKeywordSpan">importFastBootDependencies</span>(host);
+  } else {
+    this.importBrowserDependencies(host);
+  }
+},
+
+treeForVendor(vendorTree) {
+  let trees = [];
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-cli-showdown.included" id="apidoc.element.ember-cli-showdown.included">
+        function <span class="apidocSignatureSpan">ember-cli-showdown.</span>included
+        <span class="apidocSignatureSpan">(app)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">included(app) {
+  this._super.included.apply(this, arguments);
+
+  let host = this._findHost();
+
+  if (isFastBoot()) {
+    this.importFastBootDependencies(host);
+  } else {
+    this.importBrowserDependencies(host);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-cli-showdown.treeForVendor" id="apidoc.element.ember-cli-showdown.treeForVendor">
+        function <span class="apidocSignatureSpan">ember-cli-showdown.</span>treeForVendor
+        <span class="apidocSignatureSpan">(vendorTree)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">treeForVendor(vendorTree) {
+  let trees = [];
+
+  if (vendorTree) {
+    trees.push(vendorTree);
+  }
+
+  trees.push(funnel(path.dirname(require.resolve(&#x27;showdown/dist/showdown.js&#x27;)), {
+    files: [&#x27;showdown.js&#x27;],
+  }));
+
+  if (isFastBoot()) {
+    trees.push(funnel(path.join(__dirname, &#x27;./assets&#x27;), {
+      files: [&#x27;fastboot-showdown.js&#x27;]
+    }));
+  }
+
+  return mergeTrees(trees);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.ember-cli-showdown.index" id="apidoc.module.ember-cli-showdown.index">module ember-cli-showdown.index</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.ember-cli-showdown.index.importBrowserDependencies" id="apidoc.element.ember-cli-showdown.index.importBrowserDependencies">
+        function <span class="apidocSignatureSpan">ember-cli-showdown.index.</span>importBrowserDependencies
+        <span class="apidocSignatureSpan">(app)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">importBrowserDependencies(app) {
+  this.import(&#x27;vendor/showdown.js&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+this._super.included.apply(this, arguments);
+
+let host = this._findHost();
+
+if (isFastBoot()) {
+  this.importFastBootDependencies(host);
+} else {
+  this.<span class="apidocCodeKeywordSpan">importBrowserDependencies</span>(host);
+}
+  },
+
+  treeForVendor(vendorTree) {
+let trees = [];
+
+if (vendorTree) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-cli-showdown.index.importFastBootDependencies" id="apidoc.element.ember-cli-showdown.index.importFastBootDependencies">
+        function <span class="apidocSignatureSpan">ember-cli-showdown.index.</span>importFastBootDependencies
+        <span class="apidocSignatureSpan">(app)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">importFastBootDependencies(app) {
+  let pkg = require(path.join(app.project.root, &#x27;package.json&#x27;));
+  let whitelist = pkg.fastbootDependencies;
+
+  if (!whitelist || whitelist &#x26;&#x26; !~whitelist.indexOf(&#x27;showdown&#x27;)) {
+    throw new Error(&#x22;[ember-cli-showdown] showdown is missing from package.json&#x27;s fastbootDependencies.\nSee: https://github.com
+/ember-fastboot/ember-cli-fastboot#whitelisting-packages&#x22;);
+  }
+
+  this.import(&#x27;vendor/fastboot-showdown.js&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+included(app) {
+  this._super.included.apply(this, arguments);
+
+  let host = this._findHost();
+
+  if (isFastBoot()) {
+    this.<span class="apidocCodeKeywordSpan">importFastBootDependencies</span>(host);
+  } else {
+    this.importBrowserDependencies(host);
+  }
+},
+
+treeForVendor(vendorTree) {
+  let trees = [];
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-cli-showdown.index.included" id="apidoc.element.ember-cli-showdown.index.included">
+        function <span class="apidocSignatureSpan">ember-cli-showdown.index.</span>included
+        <span class="apidocSignatureSpan">(app)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">included(app) {
+  this._super.included.apply(this, arguments);
+
+  let host = this._findHost();
+
+  if (isFastBoot()) {
+    this.importFastBootDependencies(host);
+  } else {
+    this.importBrowserDependencies(host);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ember-cli-showdown.index.treeForVendor" id="apidoc.element.ember-cli-showdown.index.treeForVendor">
+        function <span class="apidocSignatureSpan">ember-cli-showdown.index.</span>treeForVendor
+        <span class="apidocSignatureSpan">(vendorTree)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">treeForVendor(vendorTree) {
+  let trees = [];
+
+  if (vendorTree) {
+    trees.push(vendorTree);
+  }
+
+  trees.push(funnel(path.dirname(require.resolve(&#x27;showdown/dist/showdown.js&#x27;)), {
+    files: [&#x27;showdown.js&#x27;],
+  }));
+
+  if (isFastBoot()) {
+    trees.push(funnel(path.join(__dirname, &#x27;./assets&#x27;), {
+      files: [&#x27;fastboot-showdown.js&#x27;]
+    }));
+  }
+
+  return mergeTrees(trees);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
